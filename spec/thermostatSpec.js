@@ -28,4 +28,8 @@ it('has a minimum of 10 degrees', function() {
   }
   expect(thermostat.getCurrentTemperature()).toEqual(10);
 });
+
+it('has power saving mode on by default', function() {
+  expect(thermostat.isPowerSavingModeOn()).toBe(true);
+});
 });
