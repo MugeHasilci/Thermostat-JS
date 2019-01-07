@@ -25,5 +25,5 @@ $('#temperature-down').click(function() {
  $('#powersaving-off').click(function() {
    thermostat.powerSavingModeOff();
    $('#temperature').text('');
- })
+ });
 });
