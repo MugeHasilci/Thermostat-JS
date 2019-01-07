@@ -9,3 +9,19 @@
 .high-usage {
   color: red;
 }
+
+@font-face{
+ font-family:'digital-clock-font';
+ src: url('digital.ttf');
+}
+
+body {
+  text-align: center;
+  font-family:'digital-clock-font';
+  color: black;
+  background: url("https://png.pngtree.com/thumb_back/fw800/back_pic/04/04/81/60580b3b0ab522a.jpg") no-repeat  center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
