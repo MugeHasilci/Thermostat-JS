@@ -71,21 +71,28 @@
 <html>
   <head>
     <title>Thermostat</title>
+    <h1> Thermostat</h1>
+    <link rel="stylesheet" type="text/css" href="./style.css">
   </head>
   <body>
     <section>
-      <h1 id="temperature"></h1>
-      <p>
+      <h3 id="temperature"></h3>
         <button id="temperature-up">+</button>
         <button id="temperature-down">-</button>
-        <button id="temperature-reset">reset</button>
-        power saving mode is <span id="power-saving-status">on</span>
+        <br><br>
+        <button id="temperature-reset">Reset Temperature</button>
+        <br><br>
+        Power saving mode is <span id="power-saving-status">On</span>
+        <br>
         <button id="powersaving-on">PSM on</button>
         <button id="powersaving-off">PSM off</button>
-      </p>
-    </section>
-    <script src="src/thermostat.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="interface.js"></script>
+        <br><br>
+        <button id='energy-usage'>Check Energy Usage</button>
+        <span id='current-usage'></span>
+          </section>
+      <script src='src/thermostat.js'></script>
+      <script src='src/jquery-3.3.1.js'></script>
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+      <script src='./interface.js'></script>  
   </body>
 </html>

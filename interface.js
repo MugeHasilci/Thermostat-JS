@@ -1,29 +1,46 @@
 $(document).ready(function() {
   var thermostat = new Thermostat();
-  $('#temperature').text(thermostat.temperature);
+  updateCurrentTemperature()
 
-$('#temperature-up').click(function() {
-  thermostat.up();
-  $('#temperature').text(thermostat.temperature);
+  $('#temperature-up').click(function() {
+    thermostat.up();
+    updateCurrentTemperature()
+  })
+
+  $('#temperature-down').click(function() {
+    thermostat.down();
+    updateCurrentTemperature()
+  })
+
+  $('#temperature-reset').click(function() {
+    thermostat.resetTemperature();
+    updateCurrentTemperature()
+  })
+
+  $('#powersaving-on').click(function() {
+    thermostat.switchPowerSavingModeOn();
+    $('#power-saving-status').text(function() {
+      return "ON";
+    });
+    updateCurrentTemperature();
+  })
+
+  $('#powersaving-off').click(function() {
+    thermostat.switchPowerSavingModeOff();
+    $('#power-saving-status').text(function() {
+      return "OFF";
+    });
+    updateCurrentTemperature();
+  })
+
+  $('#energy-usage').click(function() {
+    $('#current-usage').text(function() {
+      return thermostat.energyUsage();
+    });
   });
 
-$('#temperature-down').click(function() {
-  thermostat.down();
-  $('#temperature').text(thermostat.temperature);
- });
-
- $('#temperature-reset').click(function() {
-   thermostat.resetTemperature();
-   $('#temperature').text(thermostat.temperature);
- });
-
- $('#powersaving-on').click(function() {
-   thermostat.isPowerSavingModeOn();
-   $('#power-saving-status').text('Power saving mode is on');
- });
-
- $('#powersaving-off').click(function() {
-   thermostat.powerSavingModeOff();
-   $('#temperature').text('');
- });
+  function updateCurrentTemperature() {
+    $('#temperature').text(thermostat.getCurrentTemperature());
+    $('#temperature').attr('class', thermostat.energyUsage());
+  }
 });
