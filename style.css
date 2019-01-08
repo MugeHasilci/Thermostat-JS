@@ -1,27 +1,96 @@
 .low-usage {
-  color: green;
+  color: #7FFF00;
 }
 
 .medium-usage {
-  color: blue;
+  color: white;
 }
 
 .high-usage {
   color: red;
 }
 
-@font-face{
- font-family:'digital-clock-font';
- src: url('digital.ttf');
-}
+
 
 body {
   text-align: center;
-  font-family:'digital-clock-font';
-  color: black;
-  background: url("https://png.pngtree.com/thumb_back/fw800/back_pic/04/04/81/60580b3b0ab522a.jpg") no-repeat  center fixed;
+  background: url("https://images.pexels.com/photos/125457/pexels-photo-125457.jpeg?cs=srgb&dl=blue-sky-bright-clouds-125457.jpg&fm=jpg") no-repeat  center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+
+
+body {
+  text-align: center;
+  font-family: 'Londrina Outline', cursive;
+  font-weight: 900;
+  color: 	white;
+  font-size: 180%
+}
+
+h1 {
+  font-size: 50px;
+  margin: 10px 0 10px 0;
+  font-family: 'Londrina Outline', cursive;
+
+}
+
+h3#temperature {
+  margin: 20px 0 10px 0;
+  font-size: 50px;
+  font-family: 'Londrina Outline', cursive;
+}
+
+p {
+  margin: 3px 0 1px 0;
+}
+
+button#powersaving-on {
+  border-radius: 50%;
+}
+
+button#powersaving-off {
+  border-radius: 50%;
+}
+
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #87CEFA ;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  font-family: futura;
+}
+
+button:hover {background-color: #7B7D7D}
+
+button:active {
+  background-color: #626567;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#current-city {
+  font-size: 14px;
+}
+
+#select-city {
+  margin: 10px 0 1px 0;
+  
+  height:200px;
+  font-size:14pt;
+}
+
+#current-temperature {
+ font-family: 'Londrina Outline', cursive;
 }
