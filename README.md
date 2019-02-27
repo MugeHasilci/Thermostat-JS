@@ -39,3 +39,7 @@ Jasmine is used for TDD.
 ## Running test
 
 For Jasmine tests open SpecRunner.html
+
+## Screenshots
+
+![ScreenShot1](./public/images/Weather.png)
